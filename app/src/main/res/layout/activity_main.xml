@@ -109,4 +109,32 @@
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_bias="0.144" />
 
+    <TextView
+        android:id="@+id/PositionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Position"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
+        app:layout_constraintEnd_toEndOf="@+id/PasswordTextView"
+        app:layout_constraintStart_toStartOf="@+id/PasswordTextView"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordTextView" />
+
+    <EditText
+        android:id="@+id/PositionInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Doctor / User"
+        app:layout_constraintBottom_toTopOf="@+id/LogInBtn"
+        app:layout_constraintEnd_toEndOf="@+id/PasswordInput"
+        app:layout_constraintStart_toStartOf="@+id/PasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordInput" />
+
 </android.support.constraint.ConstraintLayout>

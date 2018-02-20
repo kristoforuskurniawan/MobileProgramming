@@ -29,14 +29,14 @@
         android:layout_marginEnd="36dp"
         android:text="Calculate"
         app:layout_constraintBaseline_toBaselineOf="@+id/UpdateDataBtn"
-        app:layout_constraintEnd_toStartOf="@+id/ResetBtn" />
+        app:layout_constraintEnd_toStartOf="@+id/DoctorMapBtn" />
 
     <Button
-        android:id="@+id/ResetBtn"
+        android:id="@+id/DoctorMapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="Reset"
+        android:text="Doctors"
         app:layout_constraintBaseline_toBaselineOf="@+id/CalculateTodayBtn"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -67,10 +67,10 @@
         android:text="Km Walked"
         app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintVertical_bias="0.183" />
 
     <TextView
         android:id="@+id/CalUsedTextView"
@@ -83,8 +83,8 @@
         android:text="Calories Used"
         app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/KMWalkedTextView"
         app:layout_constraintVertical_bias="0.011" />
 
@@ -99,8 +99,44 @@
         android:text="Reccomended Activity"
         app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/CalUsedTextView"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/KMTextView"
+        android:layout_width="49dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:text="0 KM"
+        app:layout_constraintBaseline_toBaselineOf="@+id/KMWalkedTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/KMWalkedTextView" />
+
+    <TextView
+        android:id="@+id/KKCalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:text="0 KKCal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/CalUsedTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/CalUsedTextView" />
+
+    <TextView
+        android:id="@+id/RecomTextView"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:text="Drink"
+        app:layout_constraintBaseline_toBaselineOf="@+id/RecomActTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/RecomActTextView" />
 </android.support.constraint.ConstraintLayout>
