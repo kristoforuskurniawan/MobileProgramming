@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="app_welcome">Hello! Welcome to the HealtSelf App. Here you can maintain your daily calories and stay energetic yet healthy!</string>
+    <string name="app_name">HealthySelf</string>
+    <string name="app_welcome">Hello! Welcome to the HealthySelf App. Here you can maintain your daily calories and stay energetic yet healthy!</string>
 </resources>
