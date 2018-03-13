@@ -43,13 +43,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Log In"
+        android:onClick="changeActivity"
         app:layout_constraintBaseline_toBaselineOf="@+id/RegisterBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toEndOf="@+id/RegisterBtn" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/NameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -72,7 +73,7 @@
         android:layout_marginTop="8dp"
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/NameInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WelcomeText"
         app:layout_constraintVertical_bias="0.197" />
@@ -103,10 +104,10 @@
         android:inputType="textPersonName"
         android:text="Password"
         app:layout_constraintBottom_toTopOf="@+id/RegisterBtn"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/NameInput"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/NameInput"
+        app:layout_constraintTop_toBottomOf="@+id/NameInput"
         app:layout_constraintVertical_bias="0.144" />
 
     <TextView

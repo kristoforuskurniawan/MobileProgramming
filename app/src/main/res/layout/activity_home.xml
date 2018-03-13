@@ -31,11 +31,17 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/UpdateDataBtn"
         app:layout_constraintEnd_toStartOf="@+id/DoctorMapBtn" />
 
+    <!--
+        For the list of doctors,
+        I will use ListView. When the user click on it, map appears
+    -->
+
     <Button
         android:id="@+id/DoctorMapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:onClick="showDoctors"
         android:text="Doctors"
         app:layout_constraintBaseline_toBaselineOf="@+id/CalculateTodayBtn"
         app:layout_constraintEnd_toEndOf="parent" />

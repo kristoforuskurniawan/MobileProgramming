@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">HealthySelf</string>
     <string name="app_welcome">Hello! Welcome to the HealthySelf App. Here you can maintain your daily calories and stay energetic yet healthy!</string>
+    <string name="title_activity_show_doctors">ShowDoctorsActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_doctors_map">DoctorsMapActivity</string>
+    <string name="MapDetails">This activity shows the map of the corresponding doctors.</string>
 </resources>
