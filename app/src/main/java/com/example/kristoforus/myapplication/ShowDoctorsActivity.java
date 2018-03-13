@@ -7,8 +7,6 @@ import android.view.View;
 
 public class ShowDoctorsActivity extends AppCompatActivity {
 
-    protected Intent intent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +14,7 @@ public class ShowDoctorsActivity extends AppCompatActivity {
     }
 
     public void showDoctorsMap(View view) {
-        intent = new Intent(this, DoctorsMapActivity.class);
+        Intent intent = new Intent(this, DoctorsMapActivity.class);
         startActivity(intent);
     }
 }

@@ -8,8 +8,8 @@ import android.widget.Button;
 
 public class DoctorsMapActivity extends AppCompatActivity {
 
-    private Intent intent;
-    private Button homeButton;
+
+    public Button homeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class DoctorsMapActivity extends AppCompatActivity {
     }
 
     public void goHome(View view){
-        intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 

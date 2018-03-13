@@ -8,20 +8,21 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button showDoctorsButton = (Button) findViewById(R.id.DoctorMapBtn);
-    private Button updateButton = (Button) findViewById(R.id.UpdateDataBtn);
-    private Button calculateButton = (Button) findViewById(R.id.CalculateTodayBtn);
-
-    protected Intent intent;
+    public Button showDoctorsButton;
+    public Button updateButton;
+    public Button calculateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        showDoctorsButton = (Button) findViewById(R.id.DoctorMapBtn);
+        updateButton = (Button) findViewById(R.id.UpdateDataBtn);
+        calculateButton = (Button) findViewById(R.id.CalculateTodayBtn);
     }
 
     public void showDoctors(View view){
-        intent = new Intent(this, ShowDoctorsActivity.class);
+        Intent intent = new Intent(this, ShowDoctorsActivity.class);
         startActivity(intent);
     }
 
