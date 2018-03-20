@@ -26,4 +26,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void saveState(View v){
+
+    }
+
 }
