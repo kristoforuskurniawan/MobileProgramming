@@ -16,7 +16,7 @@ public class ShowDoctorsActivity extends AppCompatActivity {
     private ListView doctorListView;
     private ArrayList<String> doctorList;
     private ArrayAdapter<String> doctorAdapter;
-//asdfsadf
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
