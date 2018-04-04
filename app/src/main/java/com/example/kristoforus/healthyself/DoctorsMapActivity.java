@@ -17,7 +17,7 @@ public class DoctorsMapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors_map);
-        homeButton = (Button) findViewById(R.id.HomeButton);
+        homeButton = findViewById(R.id.HomeButton);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class DoctorsMapActivity extends AppCompatActivity {
 
     @Override
     protected void onPause(){
-        super.onPause();
+        super.onPause(); //aasdf
         Log.d(LOG, "onPause(Bundle) called");
     }
 
