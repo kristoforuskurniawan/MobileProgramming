@@ -97,7 +97,9 @@ public class LoginActivity extends AppCompatActivity {
                     //posInput.setSelection(2);
                 }
             });
-            alertDialog.show();
+            alertDialog.show();// Throws exception here after showing alert.
+            // Make the KM walked and calories used!
+            // Put another button to store KM walked and calories used to the database.
         }else{
             mAuth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                 @Override
