@@ -22,6 +22,7 @@ public class ShowDoctorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_doctors);
         doctorList = new ArrayList<String>(5);
+        //asdfasdf
         /*getDoctorNames(); // This feature is not yet done
         doctorAdapter = new ArrayAdapter<String>(this, R.layout.activity_show_doctors, doctorList);
         doctorListView = findViewById(R.id.doctorList);
