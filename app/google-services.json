@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "429158527703",
+    "firebase_url": "https://healthyself-a7e28.firebaseio.com",
+    "project_id": "healthyself-a7e28",
+    "storage_bucket": "healthyself-a7e28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429158527703:android:aabe4767bee215e5",
+        "android_client_info": {
+          "package_name": "com.example.kristoforus.healthyself"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429158527703-2mq8bjvcrv97slol0gti1longg3lr014.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kristoforus.healthyself",
+            "certificate_hash": "20b6acdc7f294db8092004a6c970f7f5f9c936af"
+          }
+        },
+        {
+          "client_id": "429158527703-vholi06k53mfsnt3tqn1ht7kqedhi3rp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFA8eBhHF0HdbEg9Z3ThQNUUBl3-_6Ga0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429158527703-vholi06k53mfsnt3tqn1ht7kqedhi3rp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
