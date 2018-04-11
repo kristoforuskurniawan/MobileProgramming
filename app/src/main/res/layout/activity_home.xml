@@ -7,29 +7,17 @@
     tools:context="com.example.kristoforus.healthyself.HomeActivity">
 
     <Button
-        android:id="@+id/UpdateDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:onClick="updateDetail"
-        android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
-
-    <Button
         android:id="@+id/CalculateTodayBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="444dp"
+        android:onClick="calculateToday"
         android:text="Calculate"
-        app:layout_constraintBaseline_toBaselineOf="@+id/UpdateDataBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/DoctorMapBtn"
-        app:layout_constraintStart_toEndOf="@+id/UpdateDataBtn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--
         For the list of doctors,
@@ -71,12 +59,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Km Walked"
-        app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
+        app:layout_constraintBottom_toTopOf="@+id/CalculateTodayBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.183" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/CalUsedTextView"
@@ -87,12 +74,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Calories Used"
-        app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
+        app:layout_constraintBottom_toTopOf="@+id/CalculateTodayBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/KMWalkedTextView"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <TextView
         android:id="@+id/RecomActTextView"
@@ -103,12 +90,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Reccomended Activity"
-        app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
+        app:layout_constraintBottom_toTopOf="@+id/CalculateTodayBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/CalUsedTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.208" />
 
     <TextView
         android:id="@+id/KMTextView"
@@ -119,7 +106,7 @@
         android:text="0 KM"
         app:layout_constraintBaseline_toBaselineOf="@+id/KMWalkedTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toEndOf="@+id/KMWalkedTextView" />
 
     <TextView
@@ -131,24 +118,20 @@
         android:text="0 KKCal"
         app:layout_constraintBaseline_toBaselineOf="@+id/CalUsedTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toEndOf="@+id/CalUsedTextView" />
 
     <TextView
         android:id="@+id/RecomTextView"
-        android:layout_width="51dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="132dp"
+        android:layout_height="27dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Drink"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/RecomActTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
-        app:layout_constraintStart_toEndOf="@+id/RecomActTextView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toEndOf="@+id/RecomActTextView" />
 
     <TextView
         android:id="@+id/ScheduleTextView"
@@ -159,45 +142,36 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Your Schedule"
-        app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
+        app:layout_constraintBottom_toTopOf="@+id/CalculateTodayBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/RecomActTextView"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintTop_toBottomOf="@+id/RecomActTextView" />
 
     <TextView
         android:id="@+id/ScheduleListTextView"
-        android:layout_width="179dp"
-        android:layout_height="105dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="152dp"
+        android:layout_height="31dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Schedule List"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/CalculateTodayBtn"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ScheduleTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.716"
-        app:layout_constraintStart_toEndOf="@+id/ScheduleTextView"
-        app:layout_constraintTop_toBottomOf="@+id/RecomTextView" />
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toEndOf="@+id/ScheduleTextView" />
 
     <Button
         android:id="@+id/LogoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Logout"
+        android:layout_marginStart="28dp"
         android:onClick="Logout"
-        app:layout_constraintBottom_toTopOf="@+id/UpdateDataBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.979" />
+        android:text="Logout"
+        app:layout_constraintBaseline_toBaselineOf="@+id/CalculateTodayBtn"
+        app:layout_constraintEnd_toStartOf="@+id/CalculateTodayBtn"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/WelcomeTextView"

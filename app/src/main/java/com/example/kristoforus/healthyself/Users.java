@@ -6,31 +6,38 @@ package com.example.kristoforus.healthyself;
 
 public class Users {
     private String name;
-    private int caloriesUsed;
+    private int calories_used;
+    private int km_walked;
 
     public Users(){
         this.name = "";
-        this.caloriesUsed = 0;
+        this.calories_used = 0;
+        this.km_walked = 0;
     }
 
-    public Users(String name, int caloriesUsed){
+    public Users(String name, int caloriesUsed, int kmWalked){
         this.name = name;
-        this.caloriesUsed = caloriesUsed;
+        this.calories_used = caloriesUsed;
+        this.km_walked = kmWalked;
     }
 
     public void setName(String name){
         this.name = name;
     }
 
-    public  void setCaloriesUsed(int caloriesUsed){
-        this.caloriesUsed = caloriesUsed;
+    public  void setCalories_used(int calories_used){
+        this.calories_used = calories_used;
     }
+
+    public void setKm_walked(int km_walked) { this.km_walked = km_walked; }
 
     public String getName(){
         return this.name;
     }
 
-    public int getCaloriesUsed(){
-        return this.caloriesUsed;
+    public int getCalories_used(){
+        return this.km_walked * 160;
     }
+
+    public int getKm_walked() { return this.km_walked; }
 }

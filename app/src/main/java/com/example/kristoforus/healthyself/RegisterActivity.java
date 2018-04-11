@@ -68,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if(!task.isSuccessful()){
                         Toast.makeText(RegisterActivity.this, "Registration error!", Toast.LENGTH_SHORT).show();
                     }else{
-                        if(asUser.isChecked() && (!asDoctor.isChecked())){ // Registered as user. This feauture is not yet implemented.
+                        if(asUser.isChecked()){ // Registered as user. This feature is not yet implemented.
                             DatabaseReference mRef = FirebaseDatabase.getInstance().getReference();
                             DatabaseReference usersRef = mRef.child("Users/" + mAuth.getCurrentUser().getUid());
                             usersRef.child("name").setValue(Name); // name and calories_used is colName from database table
@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                             DatabaseReference mRef = FirebaseDatabase.getInstance().getReference();
                             DatabaseReference usersRef = mRef.child("Doctors/" + mAuth.getCurrentUser().getUid());
                             usersRef.child("name").setValue(Name); // name and calories_used is colName from database table
-                            usersRef.child("calories_used").setValue(0); // high_score in example
+                            usersRef.child("visited_by_users").setValue(0); // high_score in example
                         }
                         Toast.makeText(RegisterActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

@@ -23,11 +23,10 @@ import org.w3c.dom.Text;
 public class HomeActivity extends AppCompatActivity {
 
     public Button showDoctorsButton;
-    public Button updateButton;
     public Button calculateButton;
-    public int usedCal;
+    public int usedCal, kmWalked;
     private static final String LOG = "HomeActivity";
-    private TextView caloriesUsage, welcomeText;
+    private TextView caloriesUsage, welcomeText, kmWalkedTextView;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
@@ -36,10 +35,10 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        caloriesUsage = (TextView) findViewById(R.id.KKCalTextView);
-        showDoctorsButton = (Button) findViewById(R.id.DoctorMapBtn);
-        updateButton = (Button) findViewById(R.id.UpdateDataBtn);
-        calculateButton = (Button) findViewById(R.id.CalculateTodayBtn);
+        caloriesUsage = findViewById(R.id.KKCalTextView);
+        kmWalkedTextView = findViewById(R.id.KMTextView);
+        showDoctorsButton = findViewById(R.id.DoctorMapBtn);
+        calculateButton = findViewById(R.id.CalculateTodayBtn);
         SharedPreferences prefs = getSharedPreferences("myPrefs", MODE_PRIVATE);
         caloriesUsage.setText(usedCal + " KKCal"); // Here usedCal represents highscore. You can close the app and the value will still the same. Works with rotate as well.
         welcomeText = findViewById(R.id.WelcomeTextView);
@@ -51,8 +50,9 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Users currentUser = dataSnapshot.getValue(Users.class);
-                caloriesUsage.setText(currentUser.getCaloriesUsed() + "KKCal");
                 welcomeText.setText("Welcome, " + currentUser.getName());
+                kmWalkedTextView.setText(currentUser.getKm_walked() + " KM"); // KM and Calories are now stored and retrieved
+                caloriesUsage.setText(currentUser.getCalories_used() + " KKCal");
             }
 
             @Override
@@ -91,8 +91,9 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void updateDetail(View v){
-        usedCal = usedCal + 1;
+    public void calculateToday(View v){
+        kmWalked = kmWalked + 1;
+        usedCal = kmWalked * 160;
         SharedPreferences sharedPreferences = getSharedPreferences("myPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("UsedCal", usedCal);
@@ -101,9 +102,10 @@ public class HomeActivity extends AppCompatActivity {
         DatabaseReference mRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference usersRef = mRef.child("Users/" + mAuth.getCurrentUser().getUid());
         usersRef.child("calories_used").setValue(usedCal);
+        usersRef.child("km_walked").setValue(kmWalked);
         caloriesUsage.setText(usedCal + " KKCal");
+        kmWalkedTextView.setText(kmWalked + " KM");
     }
-
 
     @Override
     protected void onSaveInstanceState(Bundle outState){
